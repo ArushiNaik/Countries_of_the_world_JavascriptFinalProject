@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Country Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Country Explorer is a React-based web app that lets users browse countries, search by name, and view detailed information about each country including population, capital, GDP, currency, and life expectancy.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search for countries by name
+- Browse a responsive country card grid
+- Open a dedicated details page for each country
+- View country flags from the Flag CDN service
+- Explore structured country data from a local JSON file
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- React Router
+- CSS
+- Bulma-style utility classes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```text
+Countries_of_the_world_JavascriptFinalProject/
+├── App.js
+├── index.css
+├── index.html
+├── index.js
+├── package.json
+├── components/
+│   ├── CountryCard.js
+│   └── SearchBar.js
+├── data/
+│   └── countries.json
+├── pages/
+│   ├── Countries.js
+│   └── CountryDetails.js
+├── .gitignore
+├── README.md
+└── package-lock.json
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How it works
 
-### `npm run build`
+- `pages/Countries.js` loads the country dataset and filters it based on the search term.
+- `components/CountryCard.js` renders individual cards with country details and a "More Info" link.
+- `pages/CountryDetails.js` reads the selected country code from the URL and shows a detailed view.
+- `App.js` configures the routes for the home page and country detail page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/ArushiNaik/Countries_of_the_world_JavascriptFinalProject.git
+cd Countries_of_the_world_JavascriptFinalProject
+```
 
-### `npm run eject`
+2. Install dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the app:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open your browser and go to:
 
-## Learn More
+```text
+http://localhost:3000
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Runs the test suite
 
-### Code Splitting
+## Data Source
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application uses `data/countries.json` as its local data source for country information.
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is for educational and personal use.
